@@ -22,7 +22,6 @@ const personalBgs = Array.from({ length: 25 }, (_, i) => `/bg${i + 1}.jpg`);
 const violetGrad = "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)";
 const subtleBg = "rgba(255,192,203,0.11)";
 
-// ------ Sample milestone ------
 const polaroids = [
   {
     title: "The First Text",
@@ -113,7 +112,7 @@ const polaroids = [
     title: "The Golden Era",
     memory:
       "Adhe Bangaram Era. Your first ever nickname.\nPretty sure Tuthi came later",
-    quizQuestion: "Who texted first- Me/You?",
+    quizQuestion: "What was my first nickname?",
     quizAnswer: "nickname",
     img: "/memory7.jpg",
     theme: {
@@ -350,7 +349,7 @@ const polaroids = [
   },
 ];
 
-// ------ Background Collage (restored) ------
+// Background collage function
 function FadedBackground() {
   const imgSize = 140;
   const cols = 5;
@@ -405,7 +404,6 @@ function FadedBackground() {
   );
 }
 
-// ------ Popup animation ------
 const popupVariants = {
   hidden: { opacity: 0, scale: 0.9, y: 40 },
   visible: {
@@ -447,7 +445,6 @@ export default function App() {
     setHeartClicked(false);
   };
 
-  // ------ Submit Fix ------
   const handleSubmit = (e, item) => {
     e.stopPropagation();
     const isCorrect =
@@ -461,6 +458,11 @@ export default function App() {
 
     setPopupOpen(true);
     document.body.style.overflow = "hidden";
+
+    // Scroll to top smoothly to keep popup visible on mobile
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   };
 
   const closePopup = () => {
@@ -485,7 +487,6 @@ export default function App() {
         paddingBottom: 100,
       }}
     >
-      {/* subtle overlay */}
       <div
         style={{
           position: "fixed",
@@ -498,21 +499,12 @@ export default function App() {
           zIndex: 0,
         }}
       />
-      {/* background collage restored */}
       <FadedBackground />
 
-      <h1
-        style={{
-          textAlign: "center",
-          fontWeight: 700,
-          fontSize: 28,
-          margin: "30px 0",
-        }}
-      >
+      <h1 style={{ textAlign: "center", fontWeight: 700, fontSize: 28, margin: "30px 0" }}>
         Polaroid Trail of Us
       </h1>
 
-      {/* Secret Messages Button */}
       <motion.div
         onClick={() => {
           setShowMessages(true);
@@ -536,16 +528,7 @@ export default function App() {
         <FontAwesomeIcon icon={faEnvelope} color="#fff" size="lg" />
       </motion.div>
 
-      {/* Polaroid Cards */}
-      <div
-        style={{
-          maxWidth: 340,
-          margin: "auto",
-          marginTop: 20,
-          zIndex: 10,
-          position: "relative",
-        }}
-      >
+      <div style={{ maxWidth: 340, margin: "auto", marginTop: 20, zIndex: 10, position: "relative" }}>
         {polaroids.map((item, idx) => (
           <motion.div
             key={idx}
@@ -559,11 +542,7 @@ export default function App() {
               cursor: "pointer",
               paddingBottom: 16,
             }}
-            whileHover={{
-              scale: 1.05,
-              rotate: 0,
-              boxShadow: "0 15px 28px rgba(188,78,189,0.5)",
-            }}
+            whileHover={{ scale: 1.05, rotate: 0, boxShadow: "0 15px 28px rgba(188,78,189,0.5)" }}
             onClick={() => handleCardClick(item)}
           >
             {item.video ? (
@@ -573,33 +552,17 @@ export default function App() {
                 muted
                 loop
                 playsInline
-                style={{
-                  width: "100%",
-                  height: 156,
-                  borderRadius: 14,
-                  objectFit: "cover",
-                }}
+                style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }}
               />
             ) : (
               <img
                 src={item.img}
                 alt={item.title}
-                style={{
-                  width: "100%",
-                  height: 156,
-                  borderRadius: 14,
-                  objectFit: "cover",
-                }}
+                style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }}
               />
             )}
             <div
-              style={{
-                fontWeight: 700,
-                fontSize: 18,
-                marginTop: 8,
-                color: "#65314f",
-                textAlign: "center",
-              }}
+              style={{ fontWeight: 700, fontSize: 18, marginTop: 8, color: "#65314f", textAlign: "center" }}
             >
               {item.title}
             </div>
@@ -607,6 +570,9 @@ export default function App() {
               <input
                 type="text"
                 placeholder={item.quizQuestion}
+                value={quizInput}
+                onClick={(e) => e.stopPropagation()}
+                onChange={(e) => setQuizInput(e.target.value)}
                 style={{
                   width: "100%",
                   padding: 9,
@@ -614,10 +580,8 @@ export default function App() {
                   border: "1.5px solid #aa77b1",
                   fontWeight: 700,
                   textAlign: "center",
+                  fontSize: "17px",
                 }}
-                value={quizInput}
-                onClick={(e) => e.stopPropagation()}
-                onChange={(e) => setQuizInput(e.target.value)}
               />
               <button
                 style={{
@@ -630,6 +594,7 @@ export default function App() {
                   fontWeight: 700,
                   padding: "10px 0",
                   cursor: "pointer",
+                  fontSize: "17px",
                 }}
                 onClick={(e) => handleSubmit(e, item)}
               >
@@ -640,7 +605,6 @@ export default function App() {
         ))}
       </div>
 
-      {/* Popup */}
       <AnimatePresence>
         {selected && popupOpen && (
           <motion.div
@@ -695,78 +659,34 @@ export default function App() {
                 muted
                 loop
                 playsInline
-                style={{
-                  width: "100%",
-                  borderRadius: 20,
-                  height: 180,
-                  objectFit: "cover",
-                  marginBottom: 20,
-                }}
+                style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }}
               />
             ) : (
               <img
                 src={selected.img}
                 alt={selected.title}
-                style={{
-                  width: "100%",
-                  borderRadius: 20,
-                  height: 180,
-                  objectFit: "cover",
-                  marginBottom: 20,
-                }}
+                style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }}
               />
             )}
 
-            <h3
-              style={{
-                textAlign: "center",
-                fontWeight: 700,
-                fontSize: 22,
-                marginBottom: 10,
-              }}
-            >
+            <h3 style={{ textAlign: "center", fontWeight: 700, fontSize: 22, marginBottom: 10 }}>
               {selected.title} {selected.theme.sticker}
             </h3>
 
-            <p
-              style={{
-                whiteSpace: "pre-line",
-                fontSize: 16,
-                textAlign: "center",
-                lineHeight: 1.4,
-                marginBottom: 16,
-              }}
-            >
+            <p style={{ whiteSpace: "pre-line", fontSize: 16, textAlign: "center", lineHeight: 1.4, marginBottom: 16 }}>
               {selected.memory}
             </p>
 
-            {/* Feedback shown here inside popup */}
             {quizFeedback && (
-              <p
-                style={{
-                  fontWeight: "bold",
-                  marginBottom: 20,
-                  color: quizFeedback.includes("Good") ? "green" : "crimson",
-                }}
-              >
+              <p style={{ fontWeight: "bold", marginBottom: 20, color: quizFeedback.includes("Good") ? "green" : "crimson" }}>
                 {quizFeedback}
               </p>
             )}
 
-            {/* Heart */}
             <motion.button
-              animate={{
-                scale: heartClicked ? 1.4 : 1,
-                color: heartClicked ? "#d7157a" : "#bb57a0",
-              }}
+              animate={{ scale: heartClicked ? 1.4 : 1, color: heartClicked ? "#d7157a" : "#bb57a0" }}
               onClick={() => setHeartClicked(!heartClicked)}
-              style={{
-                fontSize: 40,
-                cursor: "pointer",
-                border: "none",
-                background: "transparent",
-                marginBottom: 12,
-              }}
+              style={{ fontSize: 40, cursor: "pointer", border: "none", background: "transparent", marginBottom: 12 }}
               whileTap={{ scale: 1.6 }}
               aria-label="Favourite button"
             >
@@ -776,7 +696,6 @@ export default function App() {
         )}
       </AnimatePresence>
 
-      {/* Secret Messages Bottom Sheet (restored) */}
       <AnimatePresence>
         {showMessages && (
           <motion.div
@@ -800,48 +719,21 @@ export default function App() {
               color: "#824d86",
             }}
           >
-            <div
-              style={{
-                position: "relative",
-                textAlign: "center",
-                marginBottom: 16,
-              }}
-            >
+            <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
               <h3 style={{ fontWeight: 700, fontSize: 22 }}>Secret Messages</h3>
               <button
                 onClick={() => setShowMessages(false)}
-                style={{
-                  position: "absolute",
-                  top: 16,
-                  right: 20,
-                  fontSize: 24,
-                  border: "none",
-                  background: "transparent",
-                  cursor: "pointer",
-                  color: "#824d86",
-                }}
+                style={{ position: "absolute", top: 16, right: 20, fontSize: 24, border: "none", background: "transparent", cursor: "pointer", color: "#824d86" }}
               >
                 <FontAwesomeIcon icon={faXmark} />
               </button>
             </div>
 
-            <div
-              style={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "space-between",
-              }}
-            >
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
               <button
                 onClick={prevMsg}
                 disabled={msgIndex === 0}
-                style={{
-                  border: "none",
-                  background: "transparent",
-                  fontSize: 28,
-                  color: msgIndex === 0 ? "#d5aac6" : "#824d86",
-                  cursor: msgIndex === 0 ? "default" : "pointer",
-                }}
+                style={{ border: "none", background: "transparent", fontSize: 28, color: msgIndex === 0 ? "#d5aac6" : "#824d86", cursor: msgIndex === 0 ? "default" : "pointer" }}
               >
                 <FontAwesomeIcon icon={faArrowLeft} />
               </button>
@@ -849,42 +741,19 @@ export default function App() {
               <img
                 src={secretMessages[msgIndex].img}
                 alt={`Secret message ${msgIndex + 1}`}
-                style={{
-                  maxWidth: "85%",
-                  maxHeight: 220,
-                  borderRadius: 20,
-                  objectFit: "cover",
-                }}
+                style={{ maxWidth: "85%", maxHeight: 220, borderRadius: 20, objectFit: "cover" }}
               />
 
               <button
                 onClick={nextMsg}
                 disabled={msgIndex === secretMessages.length - 1}
-                style={{
-                  border: "none",
-                  background: "transparent",
-                  fontSize: 28,
-                  color:
-                    msgIndex === secretMessages.length - 1
-                      ? "#d5aac6"
-                      : "#824d86",
-                  cursor:
-                    msgIndex === secretMessages.length - 1
-                      ? "default"
-                      : "pointer",
-                }}
+                style={{ border: "none", background: "transparent", fontSize: 28, color: msgIndex === secretMessages.length - 1 ? "#d5aac6" : "#824d86", cursor: msgIndex === secretMessages.length - 1 ? "default" : "pointer" }}
               >
                 <FontAwesomeIcon icon={faArrowRight} />
               </button>
             </div>
 
-            <p
-              style={{
-                fontWeight: 600,
-                textAlign: "center",
-                marginTop: 8,
-              }}
-            >
+            <p style={{ fontWeight: 600, textAlign: "center", marginTop: 8 }}>
               {msgIndex + 1} / {secretMessages.length}
             </p>
           </motion.div>
