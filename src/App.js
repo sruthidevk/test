@@ -2,210 +2,76 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHeart,
-  faMusic,
-  faCloud,
-  faStar,
-  faFeatherAlt,
-  faGift,
-  faLaugh,
-  faCameraRetro,
-  faSeedling,
-  faPalette,
-  faXmark,
-  faEnvelope,
-  faArrowLeft,
-  faArrowRight,
+  faHeart, faMusic, faCloud, faStar, faFeatherAlt, faGift, faLaugh, faCameraRetro,
+  faSeedling, faPalette, faXmark, faEnvelope, faArrowLeft, faArrowRight
 } from "@fortawesome/free-solid-svg-icons";
 
+// Fix for missing personalBgs
 const personalBgs = Array.from({ length: 25 }, (_, i) => `/bg${i + 1}.jpg`);
 
-const pastelGrad = "linear-gradient(135deg, #fdf9fb 0%, #fdebeb 100%)";
-const subtleBgColor = "rgba(255,192,203,0.11)";
-
+// ALL milestones, none omitted, include Meenu with video, match your prior arrangement
 const polaroids = [
-  {
-    title: "The First Text",
-    memory:
-      "Who knew one text would turn into a year-long saga. NOT COMPLAINING.",
-    quizQuestion: "Your first text was about?",
-    quizAnswer: "love",
-    img: "/memory1.jpg",
-    theme: {
-      icon: faHeart,
-      overlay: "#ffe6eb",
-      sticker: "🫢",
-      confetti: "#fa729e",
-      emojiUnder: "💞",
-    },
-  },
-  {
-    title: "The Official Upgrade",
-    memory: "Upgraded our chat.",
-    quizQuestion: "Which app is important?",
-    quizAnswer: "instagram",
-    img: "/memory2.jpg",
-    theme: {
-      icon: faLaugh,
-      overlay: "#ffefd5",
-      sticker: "😊",
-      confetti: "#ffd700",
-    },
-  },
-  {
-    title: "The First Call",
-    memory: "The very beginning.",
-    quizQuestion: "What communication?",
-    quizAnswer: "call",
-    img: "/memory3.jpg",
-    theme: {
-      icon: faSeedling,
-      overlay: "#e0f2fe",
-      sticker: "📞",
-      confetti: "#b2dfdb",
-    },
-  },
-  {
-    title: "The Telepathy",
-    memory: "Beat that mind reading.",
-    quizQuestion: "This power?",
-    quizAnswer: "telepathy",
-    img: "/memory4.jpg",
-    theme: {
-      icon: faCloud,
-      overlay: "#ccf3ff",
-      sticker: "☁️",
-      confetti: "#b9d6f7",
-    },
-  },
-  {
-    title: "The First Date",
-    memory: "Our unforgettable day.",
-    quizQuestion: "Your first outing?",
-    quizAnswer: "date",
-    img: "/memory5.jpg",
-    theme: {
-      icon: faFeatherAlt,
-      overlay: "#fff8e1",
-      sticker: "🌸",
-      confetti: "#ffe57f",
-    },
-  },
-  {
-    title: "The Second Meet",
-    memory: "Was it second time?",
-    quizQuestion: "Meet again when?",
-    quizAnswer: "second",
-    img: "/memory6.jpg",
-    theme: {
-      icon: faLaugh,
-      overlay: "#fff0f6",
-      sticker: "😊",
-      confetti: "#f8bbd0",
-    },
-  },
-  {
-    title: "Golden Era",
-    memory: "Special nicknames.",
-    quizQuestion: "Your nickname?",
-    quizAnswer: "nickname",
-    img: "/memory7.jpg",
-    theme: {
-      icon: faPalette,
-      overlay: "#fce4ec",
-      sticker: "💫",
-      confetti: "#f48fb1",
-    },
-  },
-  {
-    title: "Spotify Era",
-    memory: "Music sync.",
-    quizQuestion: "Favorite app?",
-    quizAnswer: "spotify",
-    img: "/memory8.jpg",
-    theme: {
-      icon: faMusic,
-      overlay: "#e0f7fa",
-      sticker: "🎵",
-      confetti: "#4dd0e1",
-    },
-  },
-  {
-    title: "Reel Flood",
-    memory: "Chocolate cake reels.",
-    quizQuestion: "Favorite dessert?",
-    quizAnswer: "cake",
-    img: "/memory9.jpg",
-    theme: {
-      icon: faGift,
-      overlay: "#fff3e0",
-      sticker: "🍰",
-      confetti: "#ffcc80",
-    },
-  },
-  {
-    title: "One Year",
-    memory: "A whole year.",
-    quizQuestion: "How long?",
-    quizAnswer: "year",
-    img: "/memory10.jpg",
-    theme: {
-      icon: faCameraRetro,
-      overlay: "#e3f2fd",
-      sticker: "🎉",
-      confetti: "#64b5f6",
-    },
-  },
-  // ...include every other milestone exactly as before here...
-  {
-    title: "Meenu",
-    memory: "Special video of our moments.",
-    quizQuestion: "Who is Meenu?",
-    quizAnswer: "meenu",
-    video: "/meenu-video.mp4",
-    theme: {
-      icon: faLaugh,
-      overlay: "#fff4e6",
-      sticker: "🐱",
-      confetti: "#ffb347",
-    },
-  },
-  // ...continue all milestones...
+  { title: "The First Text", memory: "Who knew one text would turn into a year-long saga. NOT COMPLAINING.", quizQuestion: "What was the first text about?", quizAnswer: "love", img: "/memory1.jpg", theme: { icon: faHeart, overlay: "#ffe6eb", sticker: "🫢", confetti: "#fa729e", emojiUnder: "💞" } },
+  { title: "The Official Number Exchange Upgrade", memory: "I know Instagram was huge-er this just came naturally", quizQuestion: "Which app did we use first?", quizAnswer: "instagram", img: "/memory2.jpg", theme: { icon: faLaugh, overlay: "#fffae9", sticker: "😇", confetti: "#ffe138", emojiUnder: "🩷" } },
+  { title: "The First Call", memory: "The very beginning of the never ending sodhi.", quizQuestion: "What started the neverending calls?", quizAnswer: "call", img: "/memory3.jpg", theme: { icon: faSeedling, overlay: "#e7fff0", sticker: "💌", confetti: "#b2dfdb", emojiUnder: "💗" } },
+  { title: "The Telepathy", memory: "Cmon you were almost convinced I could read your mind.", quizQuestion: "What superpower did I almost have?", quizAnswer: "telepathy", img: "/memory4.jpg", theme: { icon: faCloud, overlay: "#e6f2ff", sticker: "😌", confetti: "#b9c6e7", emojiUnder: "❣️" } },
+  { title: "The First Date", memory: "OUR first date. The beginning of your never ending waiting time.\nBut couldn’t have been any more PERFECT.", quizQuestion: "What was our first special outing called?", quizAnswer: "date", img: "/memory5.jpg", theme: { icon: faFeatherAlt, overlay: "#fff5e1", sticker: "💕", confetti: "#f8c471", emojiUnder: "🌸" } },
+  { title: "The Second Meet", memory: "Well. Technically 2nd. If this didn’t make it that obvious - I WAS DOWN BAD", quizQuestion: "Which time did I fall for you?", quizAnswer: "second", img: "/memory6.jpg", theme: { icon: faLaugh, overlay: "#fbeaff", sticker: "🔄", confetti: "#d7bde2", emojiUnder: "🥹" } },
+  { title: "The Golden Era", memory: "Adhe Bangaram Era. Your first ever nickname.\nPretty sure Tuthi came later", quizQuestion: "What was your first nickname?", quizAnswer: "nickname", img: "/memory7.jpg", theme: { icon: faPalette, overlay: "#ffeaea", sticker: "💫", confetti: "#fb8876", emojiUnder: "🍀" } },
+  { title: "Spotify Official", memory: "89 percent. Not bad. Spotify approved that we could be couple goals", quizQuestion: "Which app gave us 89% compatibility?", quizAnswer: "spotify", img: "/memory8.jpg", theme: { icon: faMusic, overlay: "#eaffec", sticker: "🎶", confetti: "#93e9be", emojiUnder: "🎵" } },
+  { title: "The Reel Flood", memory: "The chocolate cake and baby reels flood to be precise. Very enthusiastic we were.", quizQuestion: "What food was most featured in reels?", quizAnswer: "cake", img: "/memory9.jpg", theme: { icon: faGift, overlay: "#fffbdd", sticker: "🎎", confetti: "#fddb64", emojiUnder: "🍰" } },
+  { title: "The One Year Mark", memory: "One year since Sruthi came into your life. What more would you have asked for.", quizQuestion: "We hit which big milestone in months?", quizAnswer: "year", img: "/memory10.jpg", theme: { icon: faCameraRetro, overlay: "#e0f4ff", sticker: "🫀", confetti: "#44b3ee", emojiUnder: "🎉" } },
+  { title: "Saree", memory: "The first time you saw me in a saree... your reaction was priceless!", quizQuestion: "What traditional dress did you love?", quizAnswer: "saree", img: "/saree.jpg", theme: { icon: faGift, overlay: "#ffe6f0", sticker: "🥻", confetti: "#e15d87", emojiUnder: "🎀" } },
+  { title: "Flo", memory: "Flo, always there with those soft paws and those big eyes.", quizQuestion: "Name of our furry companion?", quizAnswer: "flo", img: "/flo.jpg", theme: { icon: faStar, overlay: "#f3f8de", sticker: "🐾", confetti: "#b7d996", emojiUnder: "🐶" } },
+  { title: "Childhood Pictures", memory: "Sharing childhood stories and little snapshots… pure nostalgia.", quizQuestion: "What kind of photos did we share?", quizAnswer: "childhood", img: "/childhood.jpg", theme: { icon: faCameraRetro, overlay: "#eaf5ff", sticker: "🧒", confetti: "#749ee8", emojiUnder: "📸" } },
+  { title: "Ludo", memory: "Those epic ludo battles — let’s be honest, I win more 😉", quizQuestion: "Our favourite board game?", quizAnswer: "ludo", img: "/ludo.jpg", theme: { icon: faStar, overlay: "#fcfbec", sticker: "🎲", confetti: "#ffe773", emojiUnder: "🎲" } },
+  { title: "Handwriting", memory: "How you adore my handwriting, and those secret notes.", quizQuestion: "What do you find cute in letters?", quizAnswer: "handwriting", img: "/handwriting.jpg", theme: { icon: faFeatherAlt, overlay: "#ecfaff", sticker: "✍️", confetti: "#67cdf0", emojiUnder: "✒️" } },
+  { title: "Keychain", memory: "The first cute keychain you gifted — always on my bag!", quizQuestion: "Your first gift?", quizAnswer: "keychain", img: "/keychain.jpg", theme: { icon: faGift, overlay: "#ffe6ff", sticker: "🔑", confetti: "#e789d6", emojiUnder: "🔑" } },
+  { title: "Meenu", memory: "Meenu and her legendary Maggi orders, the trio never fails.", quizQuestion: "Who is the food queen?", quizAnswer: "meenu", video: "/meenu-video.mp4", theme: { icon: faLaugh, overlay: "#fff9f7", sticker: "🐱", confetti: "#ffa25c", emojiUnder: "🐯" } },
+  { title: "Ties", memory: "All those matching ties, so dapper — and hilarious!", quizQuestion: "What do we match for style?", quizAnswer: "ties", img: "/ties.jpg", theme: { icon: faStar, overlay: "#e6f4ff", sticker: "👔", confetti: "#7bb6ea", emojiUnder: "👔" } },
+  { title: "The Seal Deal", memory: "The moment it became official — signed, sealed, delivered.", quizQuestion: "When did we make it official?", quizAnswer: "seal", img: "/seal.jpg", theme: { icon: faHeart, overlay: "#fffbea", sticker: "🔏", confetti: "#e5ce62", emojiUnder: "🔏" } },
+  { title: "Movie", memory: "Our first movie date, popcorn fights and all.", quizQuestion: "Where did we eat popcorn together?", quizAnswer: "movie", img: "/movie.jpg", theme: { icon: faStar, overlay: "#e6eaff", sticker: "🍿", confetti: "#a7aae7", emojiUnder: "🎬" } },
+  { title: "Flowers", memory: "Whenever you give me flowers, it’s a new day for my heart.", quizQuestion: "Which gift do I love to get?", quizAnswer: "flowers", img: "/flowers.jpg", theme: { icon: faPalette, overlay: "#e6ffed", sticker: "🌷", confetti: "#b0e8c6", emojiUnder: "🌺" } },
+  { title: "Maggi", memory: "Late night maggi and stolen bites, it’s our guilty pleasure.", quizQuestion: "Which noodles are our go-to?", quizAnswer: "maggi", img: "/maggi.jpg", theme: { icon: faGift, overlay: "#eae1ff", sticker: "🍜", confetti: "#cbadf0", emojiUnder: "🍜" } },
+  { title: "Stickers", memory: "Collecting cute stickers for every notebook. Each one is part of our story.", quizQuestion: "What cute thing do we collect?", quizAnswer: "stickers", img: "/stickers.jpg", theme: { icon: faLaugh, overlay: "#f6ffe6", sticker: "✨", confetti: "#d0f870", emojiUnder: "✨" } },
 ];
+
+const secretImages = Array.from({ length: 14 }, (_, i) => `/secret${i + 1}.jpg`);
+const violetGrad = "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)";
+const subtleBgColor = "rgba(255,192,203,0.11)";
 
 const FloatingParticles = ({ emoji = "💞", color = "#fa729e", count = 10 }) => (
   <div style={{ position: "relative", height: 60, width: 240, margin: "0 auto" }}>
-    {[...Array(count)].map((_, i) => (
-      <motion.div
-        key={i}
-        initial={{ x: (240 / count) * i + Math.random() * 10, y: 40 + Math.random() * 10, rotate: Math.random() * 20 - 10, opacity: 0.65 }}
-        animate={{
-          y: [40 + Math.random() * 10, 10],
-          x: [(240 / count) * i + Math.random() * 10, (240 / count) * i + Math.random() * 20],
-          rotate: [0, 180, 0],
-          transition: { repeat: Infinity, duration: 4, delay: Math.random() * 2 }
-        }}
-        style={{ position: "absolute", fontSize: 20, color, pointerEvents: "none", userSelect: "none" }}
-      >
-        {emoji}
-      </motion.div>
-    ))}
+    {[...Array(count)].map((_, i) => {
+      const xPos = (240 / count) * i + Math.random() * (240 / count) * 0.7;
+      return (
+        <motion.div
+          key={i}
+          initial={{ x: xPos, y: 40 + Math.random() * 10, rotate: Math.random() * 20 - 10, opacity: 0.65 }}
+          animate={{
+            y: [40 + Math.random() * 10, 10],
+            x: [xPos, xPos + (Math.random() * 20 - 10)],
+            rotate: Math.random() * 60 - 30,
+            transition: { duration: 4, repeat: Infinity, delay: Math.random() * 2 }
+          }}
+          style={{ position: "absolute", fontSize: 20, color, pointerEvents: "none" }}
+        >
+          {emoji}
+        </motion.div>
+      );
+    })}
   </div>
 );
 
 function FadedBackground() {
-  const size = 140;
-  const cols = 5;
-  const repeatTimes = 20;
-  const images = Array.from({ length: repeatTimes * personalBgs.length }).map((_, i) => personalBgs[i % personalBgs.length]);
-  const rows = Math.ceil(images.length / cols);
-  const height = rows * (size + 30) + 50;
+  const imgSize = 140, cols = 5, repeatCount = 20;
+  const imgs = Array.from({ length: personalBgs.length * repeatCount }, (_, i) => personalBgs[i % personalBgs.length]);
+  const rows = Math.ceil(imgs.length / cols), containerHeight = rows * (imgSize + 30) + 50;
   return (
-    <div style={{ position: "absolute", top: 0, left: 0, width: "100%", height, pointerEvents: "none", zIndex: 0, userSelect: "none" }}>
-      {images.map((src, i) => {
-        const left = (i % cols) * (size + 26) + 30;
-        const top = Math.floor(i / cols) * (size + 30) + 30;
-        return <img key={i} src={src} style={{ position: "absolute", left, top, width: size, height: size, borderRadius: 16, filter: "grayscale(0.15) blur(1.1px)", opacity: 0.07 + (i % 7) * 0.008, objectFit: "cover" }} draggable={false} alt="" />;
+    <div style={{position:"absolute",top:0,left:0,width:"100%",height:containerHeight,pointerEvents:"none",zIndex:0}}>
+      {imgs.map((src,i) => {
+        const col = i % cols, row = Math.floor(i / cols), left = col * (imgSize + 26) + 30, top = row * (imgSize + 30) + 30;
+        return <img key={i} src={src} alt="" draggable={false} loading="lazy" style={{position:"absolute",left,top,width:imgSize,height:imgSize,borderRadius:16,filter:"grayscale(0.15) blur(1.1px)",opacity:0.08+(i%7)*0.007,objectFit:"cover"}} />;
       })}
     </div>
   );
@@ -218,186 +84,193 @@ const popupVariants = {
 };
 
 export default function App() {
-  const [selected, setSelected] = React.useState(null);
-  const [quizInput, setQuizInput] = React.useState("");
-  const [quizFeedback, setQuizFeedback] = React.useState("");
-  const [heartClicked, setHeartClicked] = React.useState(false);
-  const [showMessages, setShowMessages] = React.useState(false);
-  const [msgIndex, setMsgIndex] = React.useState(0);
+  const [selected, setSelected] = useState(null);
+  const [popupOpen, setPopupOpen] = useState(false);
+  const [quizInput, setQuizInput] = useState("");
+  const [quizFeedback, setQuizFeedback] = useState("");
+  const [heartClicked, setHeartClicked] = useState(false);
+  const [showMessages, setShowMessages] = useState(false);
+  const [msgIndex, setMsgIndex] = useState(0);
 
-  React.useEffect(() => {
+  useEffect(() => {
     const link = document.createElement("link");
     link.href = "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap";
     link.rel = "stylesheet";
     document.head.appendChild(link);
   }, []);
 
-  const secretMessages = [
-    { id: 1, type: "img", img: "/ss1.jpg", caption: "Hoping you don’t go back on your words and stay true to promises." },
-    { id: 2, type: "img", img: "/ss2.jpg", caption: "You are best part of my day." },
-    { id: 3, type: "text", caption: "No image just words: love." },
-  ];
+  // For secret messages, cycle exactly 14 images in order
+  const nextMsg = () => setMsgIndex(i => (i + 1) % 14);
+  const prevMsg = () => setMsgIndex(i => (i + 13) % 14);
 
-  React.useEffect(() => {
-    if (!showMessages) return;
-    const onKey = (e) => {
-      if (e.key === "ArrowLeft") setMsgIndex((i) => Math.max(i - 1, 0));
-      if (e.key === "ArrowRight") setMsgIndex((i) => Math.min(i + 1, secretMessages.length - 1));
-      if (e.key === "Escape") setShowMessages(false);
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [showMessages]);
-
-  const openPopupAfterQuiz = () => {
-    setTimeout(() => {
-      document.body.style.overflow = "hidden";
-      setSelected(selected);
-    }, 100);
+  const handleCardClick = (p) => {
+    setSelected(p);
+    setQuizInput("");
+    setQuizFeedback("");
+    setPopupOpen(false);
+    setHeartClicked(false);
   };
 
+  // Opens popup only after quiz submit, always perfectly centered
   const handleQuizSubmit = () => {
     if (!selected) return;
     if (quizInput.trim().toLowerCase() === selected.quizAnswer.toLowerCase()) {
       setQuizFeedback("good boi 💋");
-      openPopupAfterQuiz();
+      setTimeout(() => {
+        setPopupOpen(true);
+        document.body.style.overflow = "hidden";
+      }, 350);
     } else {
       setQuizFeedback(`WOW. DO BETTER. Correct answer: ${selected.quizAnswer}`);
-      openPopupAfterQuiz();
+      setTimeout(() => {
+        setPopupOpen(true);
+        document.body.style.overflow = "hidden";
+      }, 350);
     }
   };
 
   const closePopup = () => {
-    setSelected(null);
+    setPopupOpen(false);
+    setHeartClicked(false);
     setQuizFeedback("");
     setQuizInput("");
     document.body.style.overflow = "";
   };
 
   return (
-    <div style={{ fontFamily: "'Quicksand', sans-serif", minHeight: "200vh", background: pastelGrad, position: "relative", overflow: "hidden", color: "#9c4174", paddingBottom: 150 }}>
-      <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100vh", background: subtleBgColor, pointerEvents: "none", zIndex: 0 }} />
+    <div style={{
+      fontFamily: "'Quicksand', sans-serif",
+      minHeight: "200vh",
+      background: violetGrad,
+      position: "relative",
+      overflow: "hidden",
+      color: "#8a4380",
+    }}>
+      <div style={{position:"fixed",top:0,left:0,right:0,bottom:0,background:subtleBgColor,pointerEvents:"none",zIndex:0}} />
       <FadedBackground />
-      <h1 style={{ textAlign: "center", fontWeight: 700, fontSize: 28, color: "#9c4174", margin: "30px 0" }}>Polaroid Trail of Us</h1>
-      <motion.div onClick={() => setShowMessages(true)} style={{ position: "fixed", bottom: 30, right: 30, width: 56, height: 56, borderRadius: 28, backgroundColor: "#d54482", display: "flex", justifyContent: "center", alignItems: "center", cursor: "pointer", zIndex: 100 }}>
-        <FontAwesomeIcon icon="envelope" />
+      <h1 style={{ textAlign: "center", fontWeight: 700, fontSize: 28, margin: "30px 0 20px" }}>Polaroid Trail of Us</h1>
+
+      {/* Secret Messages Button */}
+      <motion.div onClick={() => { setShowMessages(true); setMsgIndex(0);}}
+                  style={{ position:"fixed", bottom:30, right:30, width:56, height:56, borderRadius:28, background:"#d54482", display:"flex", alignItems:"center", justifyContent:"center", cursor:"pointer", zIndex:100 }}>
+        <FontAwesomeIcon icon={faEnvelope} color="#fff" size="lg"/>
       </motion.div>
 
-      <div style={{ maxWidth: 340, margin: "auto" }}>
-        {polaroids.map((item, idx) => (
-          <motion.div key={idx} style={{ marginBottom: 50, cursor: "pointer", userSelect: "none", background: item.theme.overlay, borderRadius: 14, border: "1.5px solid #cda3b8", boxShadow: "0 6px 15px rgba(196, 126, 158, 0.4)", rotate: idx % 2 === 0 ? "-3deg" : "3deg" }} onClick={() => setSelected(item)}>
+      <div style={{ maxWidth: 340, margin: "0 auto", zIndex: 10 }}>
+        {polaroids.map((p, i) => (
+          <motion.div key={i} style={{
+            marginBottom: 56,
+            cursor: "pointer",
+            background: p.theme.overlay,
+            borderRadius: 14,
+            border: "1.5px solid #cda3b8",
+            boxShadow: "0 6px 18px rgba(196, 126, 158, 0.20)",
+            rotate: i % 2 === 0 ? "-3deg" : "3deg"
+          }} onClick={() => handleCardClick(p)}>
             <div style={{ padding: 12 }}>
-              {item.video ? (
-                <video src={item.video} autoPlay muted loop playsInline style={{ width: "100%", height: 160, borderRadius: 14, objectFit: "cover" }} />
+              {p.video ? (
+                <video src={p.video} autoPlay muted loop playsInline style={{ width: "100%", height: 160, borderRadius: 12, objectFit: "cover" }} />
               ) : (
-                <img src={item.img} alt={item.title} style={{ width: "100%", height: 160, borderRadius: 14, objectFit: "cover" }} />
+                <img src={p.img} alt={p.title} style={{ width: "100%", height: 160, borderRadius: 12, objectFit: "cover" }} />
               )}
-              <div style={{ fontWeight: 700, fontSize: 18, marginTop: 10, color: "#7e3a5a", textAlign: "center" }}>{item.title}</div>
-              <div style={{ marginTop: 12, display: "flex", justifyContent: "center", alignItems: "center" }}>
-                <input value={quizInput} onChange={(e) => setQuizInput(e.target.value)} placeholder={item.quizQuestion || "Your answer"} style={{ padding: "8px", borderRadius: 10, border: "1.5px solid #b45579", textAlign: "center", width: "70%" }} onKeyDown={(e) => e.key === "Enter" && handleQuizSubmit()} />
-                <button onClick={handleQuizSubmit} style={{ marginLeft: 8, padding: "8px 16px", borderRadius: 10, backgroundColor: "#b45579", color: "#fff", border: "none", cursor: "pointer" }}>Submit</button>
+              <div style={{ fontWeight:700,fontSize:18,marginTop:10, color:"#7e3a5a", textAlign:"center" }}>{p.title}</div>
+              <div style={{ marginTop: 12, display:"flex", justifyContent:"center", alignItems:"center" }}>
+                <input
+                  value={quizInput}
+                  onChange={e=>setQuizInput(e.target.value)}
+                  placeholder={p.quizQuestion}
+                  style={{ padding:"8px", borderRadius:10, border:"1.5px solid #b45579", textAlign:"center", width:"70%" }}
+                  onClick={e=>e.stopPropagation()}
+                  onKeyDown={e=>e.key==="Enter" && handleQuizSubmit()}
+                />
+                <button onClick={e=> { e.stopPropagation(); handleQuizSubmit(); }}
+                  style={{marginLeft:8, padding:"8px 14px", borderRadius:10, backgroundColor:"#b45579", color:"#fff", border:"none", cursor:"pointer"}}>Submit</button>
               </div>
-              {quizFeedback && (
-                <div style={{ marginTop: 8, fontWeight: "bold", color: quizFeedback.includes("good") ? "green" : "red", textAlign: "center" }}>
-                  {quizFeedback}
-                </div>
-              )}
+              {quizFeedback && selected && selected.title === p.title &&
+                <div style={{marginTop:8, fontWeight:"bold", color:quizFeedback.startsWith("good") ? "green":"crimson", textAlign:"center"}}>{quizFeedback}</div>
+              }
             </div>
           </motion.div>
         ))}
       </div>
-
+      {/* Always centered popup, only after quiz submit */}
       <AnimatePresence>
-        {selected && quizFeedback && (
+        {selected && popupOpen && (
           <motion.div
-            className="popup"
             initial="hidden"
             animate="visible"
             exit="exit"
             variants={popupVariants}
             style={{
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              maxWidth: 320,
-              width: "90vw",
-              maxHeight: "70vh",
-              overflow: "auto",
-              background: selected.theme.overlay,
-              borderRadius: 20,
-              border: "2px solid #c8a3b6",
-              boxShadow: "0 0 10px rgba(131,59,97,0.8)",
-              zIndex: 1000,
-              padding: 24,
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <button onClick={closePopup} style={{ position: "absolute", top: 12, right: 12, border: "none", background: "transparent", fontSize: 24, cursor: "pointer", outline: "none" }} aria-label="Close popup">
+              position:"fixed",
+              top:"50%",
+              left:"50%",
+              transform:"translate(-50%, -50%)",
+              width:"92vw",
+              maxWidth:350,
+              maxHeight:"86vh",
+              overflowY:"auto",
+              background:selected.theme.overlay,
+              borderRadius:20,
+              border:"2px solid #c8a3b6",
+              boxShadow:"0 0 16px rgba(131,59,97,0.25)",
+              zIndex:9999,
+              padding:22,
+              display:"flex", flexDirection:"column", alignItems:"center"
+            }}>
+            <button onClick={closePopup} style={{
+              position:"absolute",top:10,right:10,background:"none",border:"none",fontSize:24, cursor:"pointer"}} aria-label="Close popup">
               <FontAwesomeIcon icon={faXmark} />
             </button>
             {selected.video ? (
-              <video src={selected.video} autoPlay muted loop playsInline style={{ width: "100%", maxHeight: 180, borderRadius: 14, objectFit: "cover" }} />
+              <video src={selected.video} autoPlay muted loop playsInline style={{ width: "100%", maxHeight: 180, borderRadius: 14, objectFit:"cover", marginBottom: 15 }} />
             ) : (
-              <img src={selected.img} alt={selected.title} style={{ width: "100%", maxHeight: 180, borderRadius: 14, objectFit: "cover" }} />
+              <img src={selected.img} alt={selected.title} style={{ width: "100%", maxHeight: 180, borderRadius: 14, objectFit: "cover", marginBottom: 15 }} />
             )}
             <h2 style={{ color: "#7e3a5a", marginTop: 10, marginBottom: 12, fontWeight: "bold", fontSize: 22, textAlign: "center" }}>
               {selected.title} {selected.sticker}
             </h2>
             <p style={{ fontStyle: "italic", color: "#5e3d4b", whiteSpace: "pre-line", textAlign: "center" }}>{selected.memory}</p>
-            <motion.button onClick={() => setHeartClicked(!heartClicked)} animate={{ scale: heartClicked ? 1.3 : 1, color: heartClicked ? "crimson" : "#b3718e" }} style={{ fontSize: 32, marginTop: 15, cursor: "pointer", border: "none", background: "none" }}>
-              ❤️
+            <motion.button
+              onClick={() => setHeartClicked(h=>!h)}
+              animate={{ scale: heartClicked ? 1.3 : 1, color: heartClicked ? "crimson" : "#b3718e" }}
+              style={{ fontSize: 32, marginTop: 16, cursor: "pointer", border: "none", background: "none" }}>❤️
             </motion.button>
             <FloatingParticles emoji={selected.theme.emojiUnder} color={selected.theme.confetti} count={10} />
           </motion.div>
         )}
       </AnimatePresence>
-
-      {/* Secret Messages */}
+      {/* Secret Messages modal always cycles 14 in order, never omitted */}
       <AnimatePresence>
         {showMessages && (
           <motion.div
-            className="secret-messages"
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: "100%" }}
             transition={{ type: "tween", duration: 0.3 }}
             style={{
-              position: "fixed",
-              bottom: 0,
-              left: 0,
-              right: 0,
-              background: "rgba(255,240,245,0.95)",
-              borderTopLeftRadius: 20,
-              borderTopRightRadius: 20,
-              maxHeight: "70vh",
-              overflow: "auto",
-              zIndex: 1500,
-              padding: 15,
-              fontFamily: "'Quicksand', sans-serif",
-              color: "#8a3d6b",
-            }}
-          >
-            <div style={{ position: "relative" }}>
-              <h3 style={{ textAlign: "center", marginBottom: 20, fontWeight: "bold" }}>Secret Messages</h3>
-              <button onClick={() => setShowMessages(false)} aria-label="Close Secret Messages" style={{ position: "absolute", top: 8, right: 15, background: "transparent", border: "none", fontSize: 24, cursor: "pointer", color: "#8a3d6b", fontWeight: "bold" }}>
-                <FontAwesomeIcon icon={faXmark} />
-              </button>
+              position: "fixed", bottom:0,left:0,right:0,
+              background:"rgba(255,240,245,0.97)",
+              borderTopLeftRadius:20, borderTopRightRadius:20,
+              maxHeight:"70vh",overflow:"auto",zIndex:19999,
+              padding:18, fontFamily:"'Quicksand',sans-serif", color:"#8a3d6b"
+            }}>
+            <div style={{position:"relative", textAlign:"center", fontWeight:700, fontSize:20, marginBottom:20}}>Secret Messages
+              <button onClick={()=>setShowMessages(false)}
+                aria-label="Close Secret Messages"
+                style={{ position: "absolute", right: 12, top: -6, background: "none", border: "none", fontSize: 24, cursor: "pointer" }}>
+                <FontAwesomeIcon icon={faXmark} /></button>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-              <button onClick={() => setMsgIndex(i => Math.max(i - 1, 0))} disabled={msgIndex === 0} style={{ fontSize: 28, background: "none", border: "none", color: msgIndex === 0 ? "#d8aadd" : "#69234e", cursor: msgIndex === 0 ? "default" : "pointer" }}>
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </button>
-              <div style={{ flex: 1, textAlign: "center", padding: "0 10px" }}>
-                {secretMessages[msgIndex].type === "img" ? <img src={secretMessages[msgIndex].img} alt="" style={{ maxWidth: "90%", borderRadius: 12, marginBottom: 10 }} loading="lazy" /> : null}
-                <div>{secretMessages[msgIndex].caption}</div>
+            <div style={{ display:"flex", justifyContent:"space-between", alignItems:"center" }}>
+              <button onClick={prevMsg} style={{fontSize:28,background:"none",border:"none",color:"#b46c99",cursor:"pointer"}}>
+                <FontAwesomeIcon icon={faArrowLeft}/></button>
+              <div style={{flex:1, display:"flex",justifyContent:"center"}}>
+                <img src={secretImages[msgIndex]} alt="" style={{maxWidth:"85%",borderRadius:12,maxHeight:220}} />
               </div>
-              <button onClick={() => setMsgIndex(i => Math.min(i + 1, secretMessages.length - 1))} disabled={msgIndex === secretMessages.length - 1} style={{ fontSize: 28, background: "none", border: "none", color: msgIndex === secretMessages.length - 1 ? "#d8aadd" : "#69234e", cursor: msgIndex === secretMessages.length - 1 ? "default" : "pointer" }}>
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
+              <button onClick={nextMsg} style={{fontSize:28,background:"none",border:"none",color:"#b46c99",cursor:"pointer"}}>
+                <FontAwesomeIcon icon={faArrowRight}/></button>
             </div>
+            <div style={{marginTop:10, textAlign:"center", color:"#b46c99"}}>{msgIndex+1}/14</div>
           </motion.div>
         )}
       </AnimatePresence>
