@@ -88,7 +88,7 @@ const polaroids = [
     theme: { icon: faMusic, overlay: "#eaffec", sticker: "🎶", confetti: "#93e9be", emojiUnder: "🎵" },
   },
   {
-    title: "Saree",
+    title: "Draped in a Wish",
     memory: "Who even puts on a saree for no reason\nother than just a RANDO saying it\nSRUTHI DOES!",
     quizQuestion: "What was the colour of the first saree\nI ever wore FOR YOU?",
     quizAnswer: "orange",
@@ -96,7 +96,7 @@ const polaroids = [
     theme: { icon: faGift, overlay: "#ffe6f0", sticker: "🥻", confetti: "#e15d87", emojiUnder: "🎀" },
   },
   {
-    title: "Meenu",
+    title: "Hi Meenu",
     memory: "The first person to know my Tusha.\nI was half afraid you’d like her more.",
     img: "/meenu.jpg",
     quizQuestion: "What did Meenu first call you?",
@@ -120,7 +120,7 @@ const polaroids = [
     theme: { icon: faStar, overlay: "#f3f8de", sticker: "🌊", confetti: "#b7d996", emojiUnder: "🐶" },
   },
   {
-    title: "Handwriting",
+    title: "Handwriting or Whatever that was",
     memory: "Too bad I didnt see it before.\nNow I’m in too deep to get away from that\nABSTRACT MODERN ART.",
     quizQuestion: "What is that style\nyou write in called?",
     quizAnswer: "ANYTHING BUT CURSIVE",
@@ -128,7 +128,7 @@ const polaroids = [
     theme: { icon: faFeatherAlt, overlay: "#ecfaff", sticker: "✍️", confetti: "#67cdf0", emojiUnder: "✒️" },
   },
   {
-    title: "Childhood Pictures",
+    title: "Seeing Panduamma🥹",
     memory: "HOW CAN I EVER BE MAD AT YOU AFTER LOOKING AT PANDU.\nEmotionally manipulated by that cute face",
     quizQuestion: "What colour garland\nwas my Pandu wearing\nin you know what?",
     quizAnswer: "red",
@@ -144,7 +144,7 @@ const polaroids = [
     theme: { icon: faLaugh, overlay: "#f6ffe6", sticker: "✨", confetti: "#d0f870", emojiUnder: "✨" },
   },
   {
-    title: "Ludo",
+    title: "Ludo kaadu Mosam",
     memory: "You killed me. Champesaavu nannu\nHOW COULD YOU🥹",
     quizQuestion: "What was my Player name?",
     quizAnswer: "Tushar-always wanted you to win. That’s a lie.",
@@ -152,7 +152,7 @@ const polaroids = [
     theme: { icon: faStar, overlay: "#fcfbec", sticker: "🎲", confetti: "#ffe773", emojiUnder: "🎲" },
   },
   {
-    title: "Keychain",
+    title: "Doctor Strange",
     memory: "No matter the X number of coincidences.\nthis shocked me the most\nNow you know why I had to bring it up.",
     quizQuestion: "What was the colour of the\ninner rotating part you lost?",
     quizAnswer: "green",
@@ -168,15 +168,15 @@ const polaroids = [
     theme: { icon: faHeart, overlay: "#fffbea", sticker: "🐥", confetti: "#e5ce62", emojiUnder: "🔏" },
   },
   {
-    title: "Movie",
-    memory: "NEVER has Sruthi thought she’d watch a TELUGU DUBBED ANIMATED 3D movie\nWITHOUT her specs. That happened.\nNot that she was interested in the movie anyway.",
+    title: "The Movie We Paid To Not Watch",
+    memory: "Sruthi’s first 3D-Distraction,Distraction,Distraction.\nNEVER has Sruthi thought she’d watch a TELUGU DUBBED ANIMATED 3D movie\nWITHOUT her specs. That happened.\nNot that she was interested in the movie anyway.",
     quizQuestion: "Which movie did we even watch\nthe first time IRL Tushar?",
     quizAnswer: "Mufasa",
     img: "/movie.jpg",
     theme: { icon: faStar, overlay: "#e6eaff", sticker: "🍿", confetti: "#a7aae7", emojiUnder: "🎬" },
   },
   {
-    title: "Ties",
+    title: "Tied to You",
     memory: "The only reason I got them that day\nwas to actually show\nHOW much I believe in you. Always.",
     quizQuestion: "What was the major colour\nin the Satya Paul tie?",
     quizAnswer: "yellow",
@@ -192,7 +192,7 @@ const polaroids = [
     theme: { icon: faStar, overlay: "#e6f4ff", sticker: "💗", confetti: "#7bb6ea", emojiUnder: "👔" },
   },
   {
-    title: "Maggi",
+    title: "Maggi^cally Different",
     memory: "Given our contrast in maggi and pani puri style made me rethink for a second\nbut nothing no matter how huge\ncan convince me otherwise.",
     quizQuestion: "Who makes better Maggi?",
     quizAnswer: "ME.ME.ME.",
@@ -535,7 +535,7 @@ export default function App() {
             fontFamily: "'Quicksand', sans-serif", color: "#824d86"
           }}>
             <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
-              <h3 style={{ fontWeight: 700, fontSize: 22 }}>Secret Messages</h3>
+              <h3 style={{ fontWeight: 700, fontSize: 22 }}>A lovely reminder to always stand by your words ^lekapothe champestha hehe jk not jk</h3>
               <button onClick={() => setShowMessages(false)} style={{
                 position: "absolute", top: 16, right: 20, fontSize: 24, border: "none",
                 background: "transparent", cursor: "pointer", color: "#824d86"
