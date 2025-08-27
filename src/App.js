@@ -33,7 +33,7 @@ const polaroids = [
   },
   {
     title: "The Official Number Exchange Upgrade",
-    memory: "I know Instagram was huge-er this just came naturally\nnever forgetting that you ignored me for 2 whole days\nI WAS DYING FOR YOU TO FIGURE IT OUT",
+    memory: "I know Instagram was huge-er this just came naturally\nNever forgetting that you ignored me for 2 whole days\nI WAS DYING FOR YOU TO FIGURE IT OUT",
     quizQuestion: "Whats my number?",
     quizAnswer: "9440992807",
     img: "/number.jpg",
@@ -41,7 +41,7 @@ const polaroids = [
   },
   {
     title: "The Reel Flood",
-    memory: "The chocolate cake and baby reels flood to be precise\nVery enthusiastic we were.",
+    memory: "The baby reels flood to be precise\nVery enthusiastic we were.",
     quizQuestion: "Who followed who first-Me/You?",
     quizAnswer: "You",
     img: "/reel.jpg",
@@ -49,7 +49,7 @@ const polaroids = [
   },
   {
     title: "The Coincidences",
-    memory: "Cmon you were almost scared of me\nI figured you out waaay early",
+    memory: "Cmon you were almost scared of me\nI kind of figured you out waaay early",
     quizQuestion: "Which one object prompted you\nto add me to your ft.tushar?",
     quizAnswer: "nosepin",
     img: "/coincidence.jpg",
@@ -57,8 +57,8 @@ const polaroids = [
   },
   {
     title: "Flower Firsts",
-    memory: "consider myself ridiculously lucky to get Tushar’s first ever flowers\nalso getting taunted by school kids on a bus? never happened before.",
-    quizQuestion: "What flower did I get you?",
+    memory: "I consider myself ridiculously lucky to get Tushar’s first ever flowers\nAlso getting taunted by school kids on a bus? never happened before.",
+    quizQuestion: "What smol flower did I get you?",
     quizAnswer: "lotus",
     img: "/flowers.jpg",
     theme: { icon: faPalette, overlay: "#e6ffed", sticker: "🌷", confetti: "#b0e8c6", emojiUnder: "🌺" },
@@ -81,7 +81,7 @@ const polaroids = [
   },
   {
     title: "Spotify Official",
-    memory: "89 percent. Not bad. Spotify approved that we could be couple goals\nand you still weren’t satisfied.",
+    memory: "89 percent. Not bad. Spotify approved that we could be couple goals\nAnd you still weren’t satisfied.",
     quizQuestion: "How much was the match percent?",
     quizAnswer: "89",
     img: "/spotify.jpg",
@@ -89,7 +89,7 @@ const polaroids = [
   },
   {
     title: "Saree",
-    memory: "Who even puts on a saree for no reason\notherthan just a RANDO saying it\nSRUTHI DOES!",
+    memory: "Who even puts on a saree for no reason\nother than just a RANDO saying it\nSRUTHI DOES!",
     quizQuestion: "What was the colour of the first saree\nI ever wore FOR YOU?",
     quizAnswer: "orange",
     img: "/saree.jpg",
@@ -97,11 +97,11 @@ const polaroids = [
   },
   {
     title: "Meenu",
-    memory: "The first person to know my Tusha.\nI was half afraid you’d like her more ",
+    memory: "The first person to know my Tusha.\nI was half afraid you’d like her more.",
     img: "/meenu.jpg",
     quizQuestion: "What did Meenu first call you?",
     quizAnswer: "tuchar",
-    theme: { icon: faLaugh, overlay: "#fff9f7", sticker: "🐱", confetti: "#ffa25c", emojiUnder: "🐯" },
+    theme: { icon: faLaugh, overlay: "#fff9f7", sticker: "😽", confetti: "#ffa25c", emojiUnder: "🐯" },
   },
   {
     title: "The Golden Era",
@@ -117,11 +117,11 @@ const polaroids = [
     quizQuestion: "My average period lasts how many days?",
     quizAnswer: "five",
     img: "/flo.jpg",
-    theme: { icon: faStar, overlay: "#f3f8de", sticker: "🐾", confetti: "#b7d996", emojiUnder: "🐶" },
+    theme: { icon: faStar, overlay: "#f3f8de", sticker: "🌊", confetti: "#b7d996", emojiUnder: "🐶" },
   },
   {
     title: "Handwriting",
-    memory: "Too bad I didnt see it before.\nNow I’m in too deep to get away from that\nABSTRACT MODERN ART ",
+    memory: "Too bad I didnt see it before.\nNow I’m in too deep to get away from that\nABSTRACT MODERN ART.",
     quizQuestion: "What is that style\nyou write in called?",
     quizAnswer: "ANYTHING BUT CURSIVE",
     img: "/handwriting.jpg",
@@ -129,7 +129,7 @@ const polaroids = [
   },
   {
     title: "Childhood Pictures",
-    memory: "HOW CAN I EVER BE MAD AT YOU AFTER LOOKING AT PANDU.\nemotionally manipulated by that cute face",
+    memory: "HOW CAN I EVER BE MAD AT YOU AFTER LOOKING AT PANDU.\nEmotionally manipulated by that cute face",
     quizQuestion: "What colour garland\nwas my Pandu wearing\nin you know what?",
     quizAnswer: "red",
     img: "/child.jpg",
@@ -138,7 +138,7 @@ const polaroids = [
   {
     title: "ChatGPT Official",
     memory: "You gyatt a tech-savvy gurll. Thank your stars atleast one of us is.",
-    quizQuestion: "I converted a few pictures of us into\na certain style - what style?",
+    quizQuestion: "I converted a few pictures into\na certain style - what style?",
     quizAnswer: "Ghibli",
     img: "/stickers.jpg",
     theme: { icon: faLaugh, overlay: "#f6ffe6", sticker: "✨", confetti: "#d0f870", emojiUnder: "✨" },
@@ -161,16 +161,16 @@ const polaroids = [
   },
   {
     title: "Familiar in the best way\n2nd round of anandam",
-    memory: "I missed you teribbly the moment you were out of sight.\nThats when I realised my best days with you\ncome with withdrawl syndrome called YOU. ",
+    memory: "I missed you teribbly the moment you were out of sight.\nThats when I realised my best days \ncome with a withdrawl syndrome called YOU. ",
     quizQuestion: "Name the place we did our first painting",
     quizAnswer: "artgram",
     img: "/seal.jpg",
-    theme: { icon: faHeart, overlay: "#fffbea", sticker: "🔏", confetti: "#e5ce62", emojiUnder: "🔏" },
+    theme: { icon: faHeart, overlay: "#fffbea", sticker: "🐥", confetti: "#e5ce62", emojiUnder: "🔏" },
   },
   {
     title: "Movie",
-    memory: "NEVER has Sruthi thought shed watch a TELUGU DUBBED ANIMATED 3D movie\nWITHOUT her specs. That happened.",
-    quizQuestion: "Which movie did we even watch\nthe first time Tushar?",
+    memory: "NEVER has Sruthi thought she’d watch a TELUGU DUBBED ANIMATED 3D movie\nWITHOUT her specs. That happened.\nNot that she was interested in the movie anyway.",
+    quizQuestion: "Which movie did we even watch\nthe first time IRL Tushar?",
     quizAnswer: "Mufasa",
     img: "/movie.jpg",
     theme: { icon: faStar, overlay: "#e6eaff", sticker: "🍿", confetti: "#a7aae7", emojiUnder: "🎬" },
@@ -184,6 +184,14 @@ const polaroids = [
     theme: { icon: faStar, overlay: "#e6f4ff", sticker: "👔", confetti: "#7bb6ea", emojiUnder: "👔" },
   },
   {
+    title: "The Birthday Season",
+    memory: "Our First Birthdays Together\nI felt a quiet joy knowing we had each other to celebrate with\nThis year my biggest gift wasn’t something grand or wrapped\nit was simply YOU,being mine.",
+    quizQuestion: "What day-DAY OF THE WEEK\nwas I born on?",
+    quizAnswer: "wednesday",
+    img: "/birthday.jpg",
+    theme: { icon: faStar, overlay: "#e6f4ff", sticker: "💗", confetti: "#7bb6ea", emojiUnder: "👔" },
+  },
+  {
     title: "Maggi",
     memory: "Given our contrast in maggi and pani puri style made me rethink for a second\nbut nothing no matter how huge\ncan convince me otherwise.",
     quizQuestion: "Who makes better Maggi?",
@@ -193,14 +201,14 @@ const polaroids = [
   },
   {
     title: "The One Year Mark",
-    memory: "One year since Sruthi came into your life. What more would you have asked for.",
+    memory: "One year since Sruthi came crash landed into your life. What more would you have asked for?",
     quizQuestion: "ARE YOU HAPPY",
-    quizAnswer: "IM SORRY.YOU DONT HAVE TO DO BETTER\nYOU ALREADY ARE THE BEST💝",
+    quizAnswer:
+      "There is no correct answer.\nI’M SORRY for when I make you feel like you have to do better\nYou really don’t.\nYOU ALREADY ARE THE BEST💝",
     img: "/memory10.jpg",
     theme: { icon: faCameraRetro, overlay: "#e0f4ff", sticker: "🫀", confetti: "#44b3ee", emojiUnder: "🎉" },
   },
 ];
-
 
 function FadedBackground() {
   const imgSize = 140;
@@ -272,15 +280,17 @@ const secretMessages = Array.from({ length: 14 }, (_, i) => ({
 }));
 
 export default function App() {
-  const [selected, setSelected] = useState(null);
-  const [popupOpen, setPopupOpen] = useState(false);
-  const [quizInput, setQuizInput] = useState("");
-  const [quizFeedback, setQuizFeedback] = useState("");
-  const [heartClicked, setHeartClicked] = useState(false);
-  const [showMessages, setShowMessages] = useState(false);
-  const [msgIndex, setMsgIndex] = useState(0);
+  const [selected, setSelected] = React.useState(null);
+  const [popupOpen, setPopupOpen] = React.useState(false);
+  const [quizInput, setQuizInput] = React.useState("");
+  const [quizFeedback, setQuizFeedback] = React.useState("");
+  const [heartClicked, setHeartClicked] = React.useState(false);
+  const [showMessages, setShowMessages] = React.useState(false);
+  const [msgIndex, setMsgIndex] = React.useState(0);
+  // New state for heart note popup
+  const [showHeartNote, setShowHeartNote] = React.useState(false);
 
-  useEffect(() => {
+  React.useEffect(() => {
     const link = document.createElement("link");
     link.href =
       "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap";
@@ -306,10 +316,8 @@ export default function App() {
         ? "Good boi 💋"
         : `WOW! Do better. Correct answer: ${item.quizAnswer}`
     );
-
     setPopupOpen(true);
     document.body.style.overflow = "hidden";
-
     // Scroll to top smoothly to keep popup visible on mobile
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -377,10 +385,34 @@ export default function App() {
           cursor: "pointer",
           zIndex: 9999,
         }}
+        aria-label="Secret messages toggle"
       >
         <FontAwesomeIcon icon={faEnvelope} color="#fff" size="lg" />
       </motion.div>
 
+      {/* Heart Note Button - bottom left */}
+      <motion.div
+        onClick={() => setShowHeartNote((prev) => !prev)}
+        style={{
+          position: "fixed",
+          bottom: 30,
+          left: 30,
+          width: 56,
+          height: 56,
+          borderRadius: 28,
+          backgroundColor: "#e75381",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          cursor: "pointer",
+          zIndex: 9999,
+        }}
+        aria-label="Heart note toggle"
+      >
+        <FontAwesomeIcon icon={faHeart} color="#fff" size="lg" />
+      </motion.div>
+
+      {/* Milestones list */}
       <div style={{ maxWidth: 340, margin: "auto", marginTop: 20, zIndex: 10, position: "relative" }}>
         {polaroids.map((item, idx) => (
           <motion.div
@@ -399,37 +431,16 @@ export default function App() {
             onClick={() => handleCardClick(item)}
           >
             {item.video ? (
-              <video
-                src={item.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }}
-              />
+              <video src={item.video} autoPlay muted loop playsInline style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }} />
             ) : (
-              <img
-                src={item.img}
-                alt={item.title}
-                style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }}
-              />
+              <img src={item.img} alt={item.title} style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }} />
             )}
             <div style={{ fontWeight: 700, fontSize: 18, marginTop: 8, color: "#65314f", textAlign: "center" }}>
               {item.title}
             </div>
             <div style={{ marginTop: 12, padding: "0 16px" }}>
-              {/* MULTI-LINE QUESTION displayed above the input */}
               {item.quizQuestion && (
-                <div
-                  style={{
-                    whiteSpace: "pre-line",
-                    fontWeight: 500,
-                    textAlign: "center",
-                    fontSize: 15,
-                    color: "#793662",
-                    marginBottom: 10,
-                  }}
-                >
+                <div style={{ whiteSpace: "pre-line", fontWeight: 500, textAlign: "center", fontSize: 15, color: "#793662", marginBottom: 10 }}>
                   {item.quizQuestion}
                 </div>
               )}
@@ -470,68 +481,26 @@ export default function App() {
         ))}
       </div>
 
+      {/* Popup */}
       <AnimatePresence>
         {selected && popupOpen && (
-          <motion.div
-            key="popup"
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={popupVariants}
-            style={{
-              position: "fixed",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              maxWidth: 360,
-              width: "90vw",
-              maxHeight: "80vh",
-              overflowY: "auto",
-              background: selected.theme.overlay,
-              borderRadius: 20,
-              border: "2px solid #d17fbb",
-              padding: 24,
-              boxShadow: "0 18px 50px rgba(218,103,189,0.5)",
-              color: "#7a4e7f",
-              zIndex: 9999,
-              fontFamily: "'Quicksand', sans-serif",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <button
-              onClick={closePopup}
-              aria-label="Close popup"
-              style={{
-                position: "absolute",
-                top: 14,
-                right: 18,
-                background: "transparent",
-                border: "none",
-                fontSize: 26,
-                cursor: "pointer",
-                color: "#883a85",
-              }}
-            >
+          <motion.div key="popup" initial="hidden" animate="visible" exit="exit" variants={popupVariants} style={{
+            position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
+            maxWidth: 360, width: "90vw", maxHeight: "80vh", overflowY: "auto",
+            background: selected.theme.overlay, borderRadius: 20, border: "2px solid #d17fbb",
+            padding: 24, boxShadow: "0 18px 50px rgba(218,103,189,0.5)", color: "#7a4e7f",
+            zIndex: 9999, fontFamily: "'Quicksand', sans-serif", display: "flex", flexDirection: "column", alignItems: "center"
+          }}>
+            <button onClick={closePopup} aria-label="Close popup" style={{
+              position: "absolute", top: 14, right: 18, background: "transparent", border: "none", fontSize: 26, cursor: "pointer", color: "#883a85"
+            }}>
               <FontAwesomeIcon icon={faXmark} />
             </button>
 
             {selected.video ? (
-              <video
-                src={selected.video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }}
-              />
+              <video src={selected.video} autoPlay muted loop playsInline style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }} />
             ) : (
-              <img
-                src={selected.img}
-                alt={selected.title}
-                style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }}
-              />
+              <img src={selected.img} alt={selected.title} style={{ width: "100%", borderRadius: 20, height: 180, objectFit: "cover", marginBottom: 20 }} />
             )}
 
             <h3 style={{ textAlign: "center", fontWeight: 700, fontSize: 22, marginBottom: 10 }}>
@@ -548,21 +517,65 @@ export default function App() {
               </p>
             )}
 
-            <motion.button
-              animate={{ scale: heartClicked ? 1.4 : 1, color: heartClicked ? "#d7157a" : "#bb57a0" }}
-              onClick={() => setHeartClicked(!heartClicked)}
-              style={{ fontSize: 40, cursor: "pointer", border: "none", background: "transparent", marginBottom: 12 }}
-              whileTap={{ scale: 1.6 }}
-              aria-label="Favourite button"
-            >
+            <motion.button animate={{ scale: heartClicked ? 1.4 : 1, color: heartClicked ? "#d7157a" : "#bb57a0" }} onClick={() => setHeartClicked(!heartClicked)} style={{
+              fontSize: 40, cursor: "pointer", border: "none", background: "transparent", marginBottom: 12
+            }} whileTap={{ scale: 1.6 }} aria-label="Favourite button">
               ❤️
             </motion.button>
           </motion.div>
         )}
       </AnimatePresence>
 
+      {/* Secret Messages Bottom Sheet */}
       <AnimatePresence>
         {showMessages && (
+          <motion.div initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "100%" }} transition={{ type: "spring", bounce: 0.25, duration: 0.3 }} style={{
+            position: "fixed", bottom: 0, left: 0, right: 0, maxHeight: "70vh", background: "#fdeaebcc",
+            borderRadius: "24px 24px 0 0", padding: 24, overflowY: "auto", zIndex: 10000, userSelect: "none",
+            fontFamily: "'Quicksand', sans-serif", color: "#824d86"
+          }}>
+            <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
+              <h3 style={{ fontWeight: 700, fontSize: 22 }}>Secret Messages</h3>
+              <button onClick={() => setShowMessages(false)} style={{
+                position: "absolute", top: 16, right: 20, fontSize: 24, border: "none",
+                background: "transparent", cursor: "pointer", color: "#824d86"
+              }}>
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+            </div>
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+              <button onClick={prevMsg} disabled={msgIndex === 0} style={{
+                border: "none",
+                background: "transparent",
+                fontSize: 28,
+                color: msgIndex === 0 ? "#d5aac6" : "#824d86",
+                cursor: msgIndex === 0 ? "default" : "pointer"
+              }}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </button>
+
+              <img src={secretMessages[msgIndex].img} alt={`Secret message ${msgIndex + 1}`} style={{
+                maxWidth: "85%", maxHeight: 220, borderRadius: 20, objectFit: "cover"
+              }} />
+
+              <button onClick={nextMsg} disabled={msgIndex === secretMessages.length - 1} style={{
+                border: "none", background: "transparent", fontSize: 28,
+                color: msgIndex === secretMessages.length - 1 ? "#d5aac6" : "#824d86",
+                cursor: msgIndex === secretMessages.length - 1 ? "default" : "pointer"
+              }}>
+                <FontAwesomeIcon icon={faArrowRight} />
+              </button>
+            </div>
+
+            <p style={{ fontWeight: 600, textAlign: "center", marginTop: 8 }}>{msgIndex + 1} / {secretMessages.length}</p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Heart Note Popup */}
+      <AnimatePresence>
+        {showHeartNote && (
           <motion.div
             initial={{ opacity: 0, y: "100%" }}
             animate={{ opacity: 1, y: 0 }}
@@ -574,52 +587,45 @@ export default function App() {
               left: 0,
               right: 0,
               maxHeight: "70vh",
-              background: "#fdeaebcc",
+              background: "#f9d9e6cc",
               borderRadius: "24px 24px 0 0",
               padding: 24,
               overflowY: "auto",
               zIndex: 10000,
               userSelect: "none",
               fontFamily: "'Quicksand', sans-serif",
-              color: "#824d86",
+              color: "#9b2875",
             }}
+            aria-label="Heart note popup"
           >
             <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
-              <h3 style={{ fontWeight: 700, fontSize: 22 }}>A lovely reminder to always stand by your words ^lekapothe champestha hehe jk not jk</h3>
+              <h3 style={{ fontWeight: 700, fontSize: 22 }}>For You To Know</h3>
               <button
-                onClick={() => setShowMessages(false)}
-                style={{ position: "absolute", top: 16, right: 20, fontSize: 24, border: "none", background: "transparent", cursor: "pointer", color: "#824d86" }}
+                onClick={() => setShowHeartNote(false)}
+                style={{
+                  position: "absolute",
+                  top: 16,
+                  right: 20,
+                  fontSize: 24,
+                  border: "none",
+                  background: "transparent",
+                  cursor: "pointer",
+                  color: "#9b2875",
+                }}
+                aria-label="Close heart note"
               >
                 <FontAwesomeIcon icon={faXmark} />
               </button>
             </div>
 
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <button
-                onClick={prevMsg}
-                disabled={msgIndex === 0}
-                style={{ border: "none", background: "transparent", fontSize: 28, color: msgIndex === 0 ? "#d5aac6" : "#824d86", cursor: msgIndex === 0 ? "default" : "pointer" }}
-              >
-                <FontAwesomeIcon icon={faArrowLeft} />
-              </button>
-
-              <img
-                src={secretMessages[msgIndex].img}
-                alt={`Secret message ${msgIndex + 1}`}
-                style={{ maxWidth: "85%", maxHeight: 220, borderRadius: 20, objectFit: "cover" }}
-              />
-
-              <button
-                onClick={nextMsg}
-                disabled={msgIndex === secretMessages.length - 1}
-                style={{ border: "none", background: "transparent", fontSize: 28, color: msgIndex === secretMessages.length - 1 ? "#d5aac6" : "#824d86", cursor: msgIndex === secretMessages.length - 1 ? "default" : "pointer" }}
-              >
-                <FontAwesomeIcon icon={faArrowRight} />
-              </button>
-            </div>
-
-            <p style={{ fontWeight: 600, textAlign: "center", marginTop: 8 }}>
-              {msgIndex + 1} / {secretMessages.length}
+            <p style={{ fontSize: 16, lineHeight: 1.5, whiteSpace: "pre-line" }}>
+              {/* Your long personal note */}
+              Dear Tushar,{"\n"}
+              Beyond all these memories, there’s something I want you to know. I see how hard you try, every single day, to make time for me even when you’re buried in work, even when things at home are hectic, even when you barely get a moment for yourself.{"\n"}I notice the effort you put in, the little ways you show up for us, and it never goes unseen.{"\n"}
+Yes, I sulk sometimes no a lot, but beneath all that, I love you to my very core and nothing can ever change that. Thank you for trying, for being so patient, and so true, and I hope you always feel just how deeply I cherish you.{"\n"}
+It’s not just ‘me’ or ‘you’ anymore it’s us and as a team, we’re solid. We’ve laughed, got mad at, missed each other, celebrated, seen each other deal with stuff and held on through it all.{"\n"}
+You are my greatest blessing, my teammate in everything.{"\n\n"}
+Thank you for letting me have you Tushar ❤
             </p>
           </motion.div>
         )}
