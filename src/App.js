@@ -201,7 +201,7 @@ const polaroids = [
   },
   {
     title: "The One Year Mark",
-    memory: "One year since Sruthi came crash landed into your life. What more would you have asked for?",
+    memory: "One year since Sruthi came and crash landed into your life. What more would you have asked for?",
     quizQuestion: "ARE YOU HAPPY",
     quizAnswer:
       "There is no correct answer.\nI’M SORRY for when I make you feel like you have to do better\nYou really don’t.\nYOU ALREADY ARE THE BEST💝",
