@@ -25,74 +25,43 @@ const subtleBg = "rgba(255,192,203,0.11)";
 const polaroids = [
   {
     title: "The First Text",
-    memory:
-      "That not so innocent notification? Yeah, it ruined tutha’s peace forever.",
-    quizQuestion: "Who texted first- Me/You?",
+    memory: "That not so innocent notification? Yeah, it ruined tutha’s peace forever.",
+    quizQuestion: "Who texted first-\nMe/You?",
     quizAnswer: "You",
     img: "/memory1.jpg",
-    theme: {
-      overlay: "#ffe6eb",
-      sticker: "🫢",
-      confetti: "#fa729e",
-      emoji: "💞",
-    },
+    theme: { overlay: "#ffe6eb", sticker: "🫢", confetti: "#fa729e", emoji: "💞" },
   },
   {
     title: "The Official Number Exchange Upgrade",
     memory: "I know Instagram was huge-er this just came naturally",
     quizQuestion: "Whats my number?",
     quizAnswer: "9440992807",
-    img: "/memory2.jpg",
-    theme: {
-      icon: faLaugh,
-      overlay: "#fffae9",
-      sticker: "😇",
-      confetti: "#ffe138",
-      emojiUnder: "🩷",
-    },
+    img: "/number.jpg",
+    theme: { icon: faLaugh, overlay: "#fffae9", sticker: "😇", confetti: "#ffe138", emojiUnder: "🩷" },
   },
   {
     title: "The First Call",
     memory: "The very beginning of the never ending sodhi.",
-    quizQuestion: "Which atrocious teacher did I go on and on about?",
+    quizQuestion: "Which atrocious teacher\ndid I go on about?",
     quizAnswer: "Asha",
-    img: "/memory3.jpg",
-    theme: {
-      icon: faSeedling,
-      overlay: "#e7fff0",
-      sticker: "💌",
-      confetti: "#b2dfdb",
-      emojiUnder: "💗",
-    },
+    img: "/call.jpg",
+    theme: { icon: faSeedling, overlay: "#e7fff0", sticker: "💌", confetti: "#b2dfdb", emojiUnder: "💗" },
   },
   {
-    title: "The Telepathy",
-    memory: "Cmon you were almost convinced I could read your mind.",
-    quizQuestion: "Which one object prompted you to add me to your ft.tushar?",
+    title: "The Coincidences",
+    memory: "Cmon you were almost scared of me.",
+    quizQuestion: "Which one object prompted you\nto add me to your ft.tushar?",
     quizAnswer: "nosepin",
-    img: "/memory4.jpg",
-    theme: {
-      icon: faCloud,
-      overlay: "#e6f2ff",
-      sticker: "😌",
-      confetti: "#b9c6e7",
-      emojiUnder: "❣️",
-    },
+    img: "/coincidence.jpg",
+    theme: { icon: faCloud, overlay: "#e6f2ff", sticker: "😌", confetti: "#b9c6e7", emojiUnder: "❣️" },
   },
   {
     title: "The First Date",
-    memory:
-      "OUR first date. The beginning of your never ending waiting time.\nBut couldn’t have been any more PERFECT.",
+    memory: "OUR first date. The beginning of your never ending waiting time.\nBut couldn’t have been any more PERFECT.",
     quizQuestion: "What colour flats was I wearing?",
     quizAnswer: "white",
     img: "/memory5.jpg",
-    theme: {
-      icon: faFeatherAlt,
-      overlay: "#fff5e1",
-      sticker: "💕",
-      confetti: "#f8c471",
-      emojiUnder: "🌸",
-    },
+    theme: { icon: faFeatherAlt, overlay: "#fff5e1", sticker: "💕", confetti: "#f8c471", emojiUnder: "🌸" },
   },
   {
     title: "The Second Meet",
@@ -100,56 +69,31 @@ const polaroids = [
     quizQuestion: "Why was I supposedly there?",
     quizAnswer: "Airtel Office",
     img: "/memory6.jpg",
-    theme: {
-      icon: faLaugh,
-      overlay: "#fbeaff",
-      sticker: "🔄",
-      confetti: "#d7bde2",
-      emojiUnder: "🥹",
-    },
+    theme: { icon: faLaugh, overlay: "#fbeaff", sticker: "🔄", confetti: "#d7bde2", emojiUnder: "🥹" },
   },
   {
     title: "The Golden Era",
-    memory:
-      "Adhe Bangaram Era. Your first ever nickname.\nPretty sure Tuthi came later",
-    quizQuestion: "What was my first nickname?",
-    quizAnswer: "nickname",
-    img: "/memory7.jpg",
-    theme: {
-      icon: faPalette,
-      overlay: "#ffeaea",
-      sticker: "💫",
-      confetti: "#fb8876",
-      emojiUnder: "🍀",
-    },
+    memory: "Adhe Bangaram Era. Your first ever nickname.\nPretty sure Tuthi came later",
+    quizQuestion: "What do you like most\nto be called?",
+    quizAnswer: "shouldnt have a fav",
+    img: "/nickname.jpg",
+    theme: { icon: faPalette, overlay: "#ffeaea", sticker: "💫", confetti: "#fb8876", emojiUnder: "🍀" },
   },
   {
     title: "Spotify Official",
     memory: "89 percent. Not bad. Spotify approved that we could be couple goals",
     quizQuestion: "How much was the match percent?",
     quizAnswer: "89",
-    img: "/memory8.jpg",
-    theme: {
-      icon: faMusic,
-      overlay: "#eaffec",
-      sticker: "🎶",
-      confetti: "#93e9be",
-      emojiUnder: "🎵",
-    },
+    img: "/spotify.jpg",
+    theme: { icon: faMusic, overlay: "#eaffec", sticker: "🎶", confetti: "#93e9be", emojiUnder: "🎵" },
   },
   {
     title: "The Reel Flood",
-    memory: "The chocolate cake and baby reels flood to be precise. Very enthusiastic we were.",
+    memory: "The chocolate cake and baby reels flood to be precise\nVery enthusiastic we were.",
     quizQuestion: "",
     quizAnswer: "cake",
-    img: "/memory9.jpg",
-    theme: {
-      icon: faGift,
-      overlay: "#fffbdd",
-      sticker: "🎎",
-      confetti: "#fddb64",
-      emojiUnder: "🍰",
-    },
+    img: "/reel.jpg",
+    theme: { icon: faGift, overlay: "#fffbdd", sticker: "🎎", confetti: "#fddb64", emojiUnder: "🍰" },
   },
   {
     title: "The One Year Mark",
@@ -157,13 +101,7 @@ const polaroids = [
     quizQuestion: "",
     quizAnswer: "year",
     img: "/memory10.jpg",
-    theme: {
-      icon: faCameraRetro,
-      overlay: "#e0f4ff",
-      sticker: "🫀",
-      confetti: "#44b3ee",
-      emojiUnder: "🎉",
-    },
+    theme: { icon: faCameraRetro, overlay: "#e0f4ff", sticker: "🫀", confetti: "#44b3ee", emojiUnder: "🎉" },
   },
   {
     title: "Saree",
@@ -171,13 +109,7 @@ const polaroids = [
     quizQuestion: "What was the colour of the saree?",
     quizAnswer: "orange",
     img: "/saree.jpg",
-    theme: {
-      icon: faGift,
-      overlay: "#ffe6f0",
-      sticker: "🥻",
-      confetti: "#e15d87",
-      emojiUnder: "🎀",
-    },
+    theme: { icon: faGift, overlay: "#ffe6f0", sticker: "🥻", confetti: "#e15d87", emojiUnder: "🎀" },
   },
   {
     title: "Flo Official",
@@ -185,27 +117,15 @@ const polaroids = [
     quizQuestion: "My average period lasts how many days?",
     quizAnswer: "five",
     img: "/flo.jpg",
-    theme: {
-      icon: faStar,
-      overlay: "#f3f8de",
-      sticker: "🐾",
-      confetti: "#b7d996",
-      emojiUnder: "🐶",
-    },
+    theme: { icon: faStar, overlay: "#f3f8de", sticker: "🐾", confetti: "#b7d996", emojiUnder: "🐶" },
   },
   {
     title: "Childhood Pictures",
     memory: "Sharing childhood stories and little snapshots… pure nostalgia.",
     quizQuestion: "Who te?",
     quizAnswer: "childhood",
-    img: "/childhood.jpg",
-    theme: {
-      icon: faCameraRetro,
-      overlay: "#eaf5ff",
-      sticker: "🧒",
-      confetti: "#749ee8",
-      emojiUnder: "📸",
-    },
+    img: "/child.jpg",
+    theme: { icon: faCameraRetro, overlay: "#eaf5ff", sticker: "🧒", confetti: "#749ee8", emojiUnder: "📸" },
   },
   {
     title: "Ludo",
@@ -213,69 +133,39 @@ const polaroids = [
     quizQuestion: "What was my Player name?",
     quizAnswer: "Tushar-always wanted you to win. That’s a lie.",
     img: "/ludo.jpg",
-    theme: {
-      icon: faStar,
-      overlay: "#fcfbec",
-      sticker: "🎲",
-      confetti: "#ffe773",
-      emojiUnder: "🎲",
-    },
+    theme: { icon: faStar, overlay: "#fcfbec", sticker: "🎲", confetti: "#ffe773", emojiUnder: "🎲" },
   },
   {
     title: "Handwriting",
     memory: "How you adore my handwriting, and those secret notes.",
-    quizQuestion: "What is that style you write in called?",
+    quizQuestion: "What is that style\nyou write in called?",
     quizAnswer: "ANYTHING BUT CURSIVE",
     img: "/handwriting.jpg",
-    theme: {
-      icon: faFeatherAlt,
-      overlay: "#ecfaff",
-      sticker: "✍️",
-      confetti: "#67cdf0",
-      emojiUnder: "✒️",
-    },
+    theme: { icon: faFeatherAlt, overlay: "#ecfaff", sticker: "✍️", confetti: "#67cdf0", emojiUnder: "✒️" },
   },
   {
     title: "Keychain",
     memory: "The first cute keychain you gifted — always on my bag!",
-    quizQuestion: "What is the colour of the inner rotating part you lost?",
+    quizQuestion: "What is the colour of the\ninner rotating part you lost?",
     quizAnswer: "green",
     img: "/keychain.jpg",
-    theme: {
-      icon: faGift,
-      overlay: "#ffe6ff",
-      sticker: "🔑",
-      confetti: "#e789d6",
-      emojiUnder: "🔑",
-    },
+    theme: { icon: faGift, overlay: "#ffe6ff", sticker: "🔑", confetti: "#e789d6", emojiUnder: "🔑" },
   },
   {
     title: "Meenu",
     memory: "Meenu and her legendary Maggi orders, the trio never fails.",
-    video: "/meenu-video.mp4",
+    img: "/meenu.jpg",
     quizQuestion: "What did Meenu first call you?",
     quizAnswer: "tuchar",
-    theme: {
-      icon: faLaugh,
-      overlay: "#fff9f7",
-      sticker: "🐱",
-      confetti: "#ffa25c",
-      emojiUnder: "🐯",
-    },
+    theme: { icon: faLaugh, overlay: "#fff9f7", sticker: "🐱", confetti: "#ffa25c", emojiUnder: "🐯" },
   },
   {
     title: "Ties",
     memory: "All those matching ties, so dapper — and hilarious!",
-    quizQuestion: "What was the major colour in the Satya Paul tie?",
+    quizQuestion: "What was the major colour\nin the Satya Paul tie?",
     quizAnswer: "yellow",
-    img: "/ties.jpg",
-    theme: {
-      icon: faStar,
-      overlay: "#e6f4ff",
-      sticker: "👔",
-      confetti: "#7bb6ea",
-      emojiUnder: "👔",
-    },
+    img: "/tie.jpg",
+    theme: { icon: faStar, overlay: "#e6f4ff", sticker: "👔", confetti: "#7bb6ea", emojiUnder: "👔" },
   },
   {
     title: "ROUND 2 YAYYII",
@@ -283,13 +173,7 @@ const polaroids = [
     quizQuestion: "Name the place we did our first painting",
     quizAnswer: "artgram",
     img: "/seal.jpg",
-    theme: {
-      icon: faHeart,
-      overlay: "#fffbea",
-      sticker: "🔏",
-      confetti: "#e5ce62",
-      emojiUnder: "🔏",
-    },
+    theme: { icon: faHeart, overlay: "#fffbea", sticker: "🔏", confetti: "#e5ce62", emojiUnder: "🔏" },
   },
   {
     title: "Movie",
@@ -297,13 +181,7 @@ const polaroids = [
     quizQuestion: "Which movie did we even watch Tushar?",
     quizAnswer: "Mufasa",
     img: "/movie.jpg",
-    theme: {
-      icon: faStar,
-      overlay: "#e6eaff",
-      sticker: "🍿",
-      confetti: "#a7aae7",
-      emojiUnder: "🎬",
-    },
+    theme: { icon: faStar, overlay: "#e6eaff", sticker: "🍿", confetti: "#a7aae7", emojiUnder: "🎬" },
   },
   {
     title: "Flowers",
@@ -311,13 +189,7 @@ const polaroids = [
     quizQuestion: "What flower did I get you?",
     quizAnswer: "lotus",
     img: "/flowers.jpg",
-    theme: {
-      icon: faPalette,
-      overlay: "#e6ffed",
-      sticker: "🌷",
-      confetti: "#b0e8c6",
-      emojiUnder: "🌺",
-    },
+    theme: { icon: faPalette, overlay: "#e6ffed", sticker: "🌷", confetti: "#b0e8c6", emojiUnder: "🌺" },
   },
   {
     title: "Maggi",
@@ -325,31 +197,18 @@ const polaroids = [
     quizQuestion: "Who makes better Maggi?",
     quizAnswer: "ME.ME.ME.",
     img: "/maggi.jpg",
-    theme: {
-      icon: faGift,
-      overlay: "#eae1ff",
-      sticker: "🍜",
-      confetti: "#cbadf0",
-      emojiUnder: "🍜",
-    },
+    theme: { icon: faGift, overlay: "#eae1ff", sticker: "🍜", confetti: "#cbadf0", emojiUnder: "🍜" },
   },
   {
     title: "ChatGPT Official",
     memory: "Collecting cute stickers for every notebook. Each one is part of our story.",
-    quizQuestion: "I converted a few pictures into a certain style - what style?",
+    quizQuestion: "I converted a few pictures into\na certain style - what style?",
     quizAnswer: "Ghibli",
     img: "/stickers.jpg",
-    theme: {
-      icon: faLaugh,
-      overlay: "#f6ffe6",
-      sticker: "✨",
-      confetti: "#d0f870",
-      emojiUnder: "✨",
-    },
+    theme: { icon: faLaugh, overlay: "#f6ffe6", sticker: "✨", confetti: "#d0f870", emojiUnder: "✨" },
   },
 ];
 
-// Background collage function
 function FadedBackground() {
   const imgSize = 140;
   const cols = 5;
@@ -360,7 +219,6 @@ function FadedBackground() {
   );
   const rows = Math.ceil(imgs.length / cols);
   const containerHeight = rows * (imgSize + 30) + 50;
-
   return (
     <div
       style={{
@@ -487,6 +345,7 @@ export default function App() {
         paddingBottom: 100,
       }}
     >
+      {/* subtle overlay */}
       <div
         style={{
           position: "fixed",
@@ -502,9 +361,10 @@ export default function App() {
       <FadedBackground />
 
       <h1 style={{ textAlign: "center", fontWeight: 700, fontSize: 28, margin: "30px 0" }}>
-        Polaroid Trail of Us
+        OUR MILESTONES
       </h1>
 
+      {/* Secret Messages Button */}
       <motion.div
         onClick={() => {
           setShowMessages(true);
@@ -561,15 +421,27 @@ export default function App() {
                 style={{ width: "100%", height: 156, borderRadius: 14, objectFit: "cover" }}
               />
             )}
-            <div
-              style={{ fontWeight: 700, fontSize: 18, marginTop: 8, color: "#65314f", textAlign: "center" }}
-            >
+            <div style={{ fontWeight: 700, fontSize: 18, marginTop: 8, color: "#65314f", textAlign: "center" }}>
               {item.title}
             </div>
             <div style={{ marginTop: 12, padding: "0 16px" }}>
+              {/* MULTI-LINE QUESTION displayed above the input */}
+              {item.quizQuestion && (
+                <div
+                  style={{
+                    whiteSpace: "pre-line",
+                    fontWeight: 500,
+                    textAlign: "center",
+                    fontSize: 15,
+                    color: "#793662",
+                    marginBottom: 10,
+                  }}
+                >
+                  {item.quizQuestion}
+                </div>
+              )}
               <input
                 type="text"
-                placeholder={item.quizQuestion}
                 value={quizInput}
                 onClick={(e) => e.stopPropagation()}
                 onChange={(e) => setQuizInput(e.target.value)}
@@ -720,7 +592,7 @@ export default function App() {
             }}
           >
             <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
-              <h3 style={{ fontWeight: 700, fontSize: 22 }}>Secret Messages</h3>
+              <h3 style={{ fontWeight: 700, fontSize: 22 }}>A lovely reminder to always stand by your words ^lekapothe champestha hehe jk not jk</h3>
               <button
                 onClick={() => setShowMessages(false)}
                 style={{ position: "absolute", top: 16, right: 20, fontSize: 24, border: "none", background: "transparent", cursor: "pointer", color: "#824d86" }}
