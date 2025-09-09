@@ -274,7 +274,7 @@ const popupVariants = {
   exit: { opacity: 0, scale: 0.9, y: 40, transition: { duration: 0.2 } },
 };
 
-const secretMessages = Array.from({ length: 14 }, (_, i) => ({
+const secretMessages = Array.from({ length: 16 }, (_, i) => ({
   img: `/secret${i + 1}.jpg`,
   caption: "",
 }));
@@ -287,7 +287,6 @@ export default function App() {
   const [heartClicked, setHeartClicked] = React.useState(false);
   const [showMessages, setShowMessages] = React.useState(false);
   const [msgIndex, setMsgIndex] = React.useState(0);
-  // New state for heart note popup
   const [showHeartNote, setShowHeartNote] = React.useState(false);
 
   React.useEffect(() => {
@@ -318,10 +317,6 @@ export default function App() {
     );
     setPopupOpen(true);
     document.body.style.overflow = "hidden";
-    // Scroll to top smoothly to keep popup visible on mobile
-    setTimeout(() => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }, 100);
   };
 
   const closePopup = () => {
@@ -481,16 +476,39 @@ export default function App() {
         ))}
       </div>
 
-      {/* Popup */}
+      {/* Popup - MODIFIED STYLE BLOCK ONLY! */}
       <AnimatePresence>
         {selected && popupOpen && (
-          <motion.div key="popup" initial="hidden" animate="visible" exit="exit" variants={popupVariants} style={{
-            position: "fixed", top: "50%", left: "50%", transform: "translate(-50%, -50%)",
-            maxWidth: 360, width: "90vw", maxHeight: "80vh", overflowY: "auto",
-            background: selected.theme.overlay, borderRadius: 20, border: "2px solid #d17fbb",
-            padding: 24, boxShadow: "0 18px 50px rgba(218,103,189,0.5)", color: "#7a4e7f",
-            zIndex: 9999, fontFamily: "'Quicksand', sans-serif", display: "flex", flexDirection: "column", alignItems: "center"
-          }}>
+          <motion.div
+            key="popup"
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            variants={popupVariants}
+            style={{
+              position: "fixed",
+              top: "7vh",
+              right: window.innerWidth >= 900 ? "5vw" : "50%",
+              left: window.innerWidth >= 900 ? "auto" : "50%",
+              transform: window.innerWidth >= 900 ? "none" : "translate(-50%, 0)",
+              maxWidth: 410,
+              width: window.innerWidth >= 900 ? "31vw" : "90vw",
+              minWidth: 320,
+              maxHeight: "83vh",
+              overflowY: "auto",
+              background: selected.theme.overlay,
+              borderRadius: 20,
+              border: "2px solid #d17fbb",
+              padding: 24,
+              boxShadow: "0 18px 50px rgba(218,103,189,0.5)",
+              color: "#7a4e7f",
+              zIndex: 9999,
+              fontFamily: "'Quicksand', sans-serif",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center"
+            }}
+          >
             <button onClick={closePopup} aria-label="Close popup" style={{
               position: "absolute", top: 14, right: 18, background: "transparent", border: "none", fontSize: 26, cursor: "pointer", color: "#883a85"
             }}>
@@ -530,10 +548,10 @@ export default function App() {
       <AnimatePresence>
         {showMessages && (
           <motion.div initial={{ opacity: 0, y: "100%" }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: "100%" }} transition={{ type: "spring", bounce: 0.25, duration: 0.3 }} style={{
-            position: "fixed", bottom: 0, left: 0, right: 0, maxHeight: "70vh", background: "#fdeaebcc",
-            borderRadius: "24px 24px 0 0", padding: 24, overflowY: "auto", zIndex: 10000, userSelect: "none",
-            fontFamily: "'Quicksand', sans-serif", color: "#824d86"
-          }}>
+              position: "fixed", bottom: 0, left: 0, right: 0, maxHeight: "70vh", background: "#fdeaebcc",
+              borderRadius: "24px 24px 0 0", padding: 24, overflowY: "auto", zIndex: 10000, userSelect: "none",
+              fontFamily: "'Quicksand', sans-serif", color: "#824d86"
+            }}>
             <div style={{ position: "relative", textAlign: "center", marginBottom: 16 }}>
               <h3 style={{ fontWeight: 700, fontSize: 22 }}>A lovely reminder to always stand by your words ^lekapothe champestha hehe jk not jk</h3>
               <button onClick={() => setShowMessages(false)} style={{
@@ -622,10 +640,10 @@ export default function App() {
               {/* Your long personal note */}
               Dear Tushar,{"\n"}
               Beyond all these memories, there’s something I want you to know. I see how hard you try, every single day, to make time for me even when you’re buried in work, even when things at home are hectic, even when you barely get a moment for yourself.{"\n"}I notice the effort you put in, the little ways you show up for us, and it never goes unseen.{"\n"}
-Yes, I sulk sometimes no a lot, but beneath all that, I love you to my very core and nothing can ever change that. Thank you for trying, for being so patient, and so true, and I hope you always feel just how deeply I cherish you.{"\n"}
-It’s not just ‘me’ or ‘you’ anymore it’s us and as a team, we’re solid. We’ve laughed, got mad at, missed each other, celebrated, seen each other deal with stuff and held on through it all.{"\n"}
-You are my greatest blessing, my teammate in everything.{"\n\n"}
-Thank you for letting me have you Tushar ❤
+              Yes, I sulk sometimes no a lot, but beneath all that, I love you to my very core and nothing can ever change that. Thank you for trying, for being so patient, and so true, and I hope you always feel just how deeply I cherish you.{"\n"}
+              It’s not just ‘me’ or ‘you’ anymore it’s us and as a team, we’re solid. We’ve laughed, got mad at, missed each other, celebrated, seen each other deal with stuff and held on through it all.{"\n"}
+              You are my greatest blessing, my teammate in everything.{"\n\n"}
+              Thank you for letting me have you Tushar ❤
             </p>
           </motion.div>
         )}
